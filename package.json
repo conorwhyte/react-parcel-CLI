@@ -1,0 +1,37 @@
+{
+  "name": "create-react-app-parcel-conor",
+  "version": "0.0.4",
+  "description": "💩 - Conor's Version",
+  "files": [
+    "index.js",
+    "CRAP.js",
+    "workspaceUtils.js"
+  ],
+  "repository": "conorwhyte/create-react-app-parcel",
+  "bin": {
+    "create-react-app-parcel": "./index.js",
+    "crap": "./index.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "bugs": {
+    "url": "https://github.com/sw-yx/create-react-app-parcel/issues"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "cross-spawn": "^4.0.0",
+    "envinfo": "5.4.0",
+    "find-pkg": "^2.0.0",
+    "fs-extra": "^5.0.0",
+    "globby": "^8.0.1",
+    "hyperquest": "^2.1.2",
+    "react-dev-utils": "^5.0.0",
+    "semver": "^5.0.3",
+    "tar-pack": "^3.4.0",
+    "tmp": "0.0.33",
+    "validate-npm-package-name": "^3.0.0"
+  }
+}
