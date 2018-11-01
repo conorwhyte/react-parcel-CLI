@@ -87,7 +87,6 @@ createApp(
   program.verbose,
   program.scriptsVersion,
   program.useNpm,
-  hiddenProgram.internalTestingTemplate
 );
 
 function createApp(name, verbose, version, useNpm, template) {
