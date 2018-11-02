@@ -1,7 +1,7 @@
 {
-  "name": "create-react-app-parcel-conor",
-  "version": "0.0.6",
-  "description": "💩 - Conor's Version",
+  "name": "create-react-app-parcel-extended",
+  "version": "0.1.0",
+  "description": "💩 - Extended Version",
   "files": [
     "index.js",
     "CRAP.js",
@@ -9,7 +9,7 @@
   ],
   "repository": "conorwhyte/create-react-app-parcel",
   "bin": {
-    "create-react-app-parcel": "./index.js",
+    "create-react-app-parcel-extended": "./index.js",
     "crap": "./index.js"
   },
   "license": "MIT",

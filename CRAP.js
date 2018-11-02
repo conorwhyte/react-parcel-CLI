@@ -60,7 +60,7 @@ if (program.info) {
         npmPackages: [
           'react@canary',
           'react-dom@canary',
-          'react-scripts-parcel-conor',
+          'react-parcel-template',
         ],
         npmGlobalPackages: ['create-react-app-parcel'],
       },
@@ -269,7 +269,7 @@ function run(
 }
 
 function getInstallPackage(version, originalDirectory) {
-  let packageToInstall = 'react-scripts-parcel-conor';
+  let packageToInstall = 'react-parcel-template';
   const validSemver = semver.valid(version);
   if (validSemver) {
     packageToInstall += `@${validSemver}`;
@@ -439,7 +439,7 @@ function checkAppName(appName) {
   }
 
   // TODO: there should be a single place that holds the dependencies
-  const dependencies = ['react', 'react-dom', 'react-scripts-parcel-conor'].sort();
+  const dependencies = ['react', 'react-dom', 'react-parcel-template'].sort();
   if (dependencies.indexOf(appName) >= 0) {
     console.error(
       chalk.red(
