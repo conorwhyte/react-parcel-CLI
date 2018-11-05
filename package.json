@@ -1,11 +1,12 @@
 {
-  "name": "create-react-app-parcel-extended",
-  "version": "0.1.1",
-  "description": "💩 - Extended Version",
+  "name": "build-parcel-app",
+  "version": "0.1.0",
+  "description": "Create React & Parcel App - Extended Version",
   "files": [
     "index.js",
     "CRAP.js",
-    "workspaceUtils.js"
+    "workspaceUtils.js",
+    "cloudformation.json"
   ],
   "repository": "conorwhyte/create-react-app-parcel",
   "bin": {
@@ -20,6 +21,7 @@
     "url": "https://github.com/sw-yx/create-react-app-parcel/issues"
   },
   "dependencies": {
+    "cfn": "^1.8.1",
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
     "cross-spawn": "^4.0.0",

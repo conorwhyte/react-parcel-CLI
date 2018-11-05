@@ -1,6 +1,7 @@
 'use strict';
 
 const validateProjectName = require('validate-npm-package-name');
+const cfn = require('cfn');
 const chalk = require('chalk');
 const commander = require('commander');
 const fs = require('fs-extra');
@@ -17,6 +18,7 @@ const envinfo = require('envinfo');
 const os = require('os');
 const findMonorepo = require('./workspaceUtils').findMonorepo;
 const packageJson = require('./package.json');
+const cloudformation = require('./cloudformation.json');
 
 // These files should be allowed to remain on a failed install,
 // but then silently removed during the next create.
@@ -40,6 +42,10 @@ const program = new commander.Command(packageJson.name)
   .option(
     '--scripts-version <alternative-package>',
     'use a non-standard version of react-scripts'
+  )
+  .option(
+    '--createSite <bucket-name>',
+    'create the Cloudformation stack'
   )
   .option('--use-npm')
   .allowUnknownOption()
@@ -72,6 +78,25 @@ if (program.info) {
     )
     .then(console.log)
     .then(() => console.log(chalk.green('Copied To Clipboard!\n')));
+}
+
+if (program.createSite) {
+  console.log(chalk.bold('BUCKET BEING CREATED', program.createSite));
+  cfn({
+    name: 'ReactApp',
+    template: cloudformation,
+    cfParams: {
+      BucketName: program.createSite,
+    },
+    tags: {
+      app: 'My React App',
+    },
+    awsConfig: {
+      region: 'eu-west-1',
+    }
+  }).then(function() {
+    console.log('Finished creating stack React App');
+  });;
 }
 
 function printValidationResults(results) {
