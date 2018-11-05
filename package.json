@@ -9,8 +9,8 @@
   ],
   "repository": "conorwhyte/create-react-app-parcel",
   "bin": {
-    "create-react-app-parcel-extended": "./index.js",
-    "crape": "./index.js"
+    "build-parcel-app": "./index.js",
+    "bpa": "./index.js"
   },
   "license": "MIT",
   "engines": {
