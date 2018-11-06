@@ -7,7 +7,7 @@ Features that comes preconfigured:
 - Most of the features that come out of the box with create-react-app, minus the serviceWorker (with the option coming soon!). 
 - Uses Parcel instead of Webpack, to remove all those webpack dependancies and provide true zero config. 
 - The addition of React Router, Flux and Sass. 
-- Setup an S3 bucket and CloudFront distribution on initial creation, to instantly deploy the site. 
+- Setup an S3 bucket and CloudFront distribution on initial creation, to instantly deploy the site. All within the free tier as long as your site doesn't get outrageous traffic.
 - Testing using both Jest/Enzyme (unit tests) and Puppeteer (intergration/E2E tests). 
 - Removal of the start scripts relying on react-scripts. I like to have full visibility of what each command is doing in the project. 
 
@@ -61,5 +61,9 @@ BUCKET=test.myreactapp.com yarn deploy
 - [create-react-app-parcel](https://github.com/sw-yx/create-react-app-parcel) - A lot of this code is based on this project, this is more of an extension to this project. The slides and video created by sw-jx was of a huge help also to understand how C.R.A and C.R.A.P works. 
 - [parcel](https://github.com/parcel-bundler/parcel) - An awesome zero config bundler. 
 
-
-## 
+## Upcoming enhancements 
+- Add in a service worker for a progressive web app.
+- Add in AWS CodePipeline and Github intergration for a nicer deployment experience. 
+- Lambda and CloudWatch events intergration for Availability testing the site. CloudWatch dashboards and alarms included to notify you when site goes down.
+- Option to link up with your Route53 domain. 
+- Flux -> Redux. 
