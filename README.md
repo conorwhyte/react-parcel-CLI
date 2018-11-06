@@ -61,7 +61,5 @@ BUCKET=test.myreactapp.com yarn deploy
 - [create-react-app-parcel](https://github.com/sw-yx/create-react-app-parcel) - A lot of this code is based on this project, this is more of an extension to this project. The slides and video created by sw-jx was of a huge help also to understand how C.R.A and C.R.A.P works. 
 - [parcel](https://github.com/parcel-bundler/parcel) - An awesome zero config bundler. 
 
-## Contributions 
-All contributions and suggestions are welcome!! :) 
 
 ## 
